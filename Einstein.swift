@@ -6,11 +6,11 @@
 //
 //  Created by Sarah Andrew
 
-//  Created on 2023-02-09
+//  Created on 2023-02-19
 
 //  Version 1.0
 
-//  Copyright (c) Year Sarah. All rights reserved.
+//  Copyright (c) 2023 Sarah. All rights reserved.
 import Foundation
 
 // Declare constant 
@@ -24,10 +24,10 @@ if let massDoub = Double(readLine()!) {
         // Calculates the amount of energy with given mass.
         let energy = massDoub * pow(speedOfLight, 2.0)
         
-        let energyRound = round(energy * 1000.0) / 1000.0
         // Display results to user
         print("The mass of", massDoub, "kg", terminator: "")
-        print(" would produce", energyRound, "of energy in J.")
+        let roundAns = String(format: "%.3e", energy)
+        print(" would produce", roundAns, "of energy in J.")
 
     } else {
         // executes whenever negative number input. 
